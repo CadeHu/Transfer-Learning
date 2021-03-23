@@ -1,0 +1,33 @@
+DANN数据集介绍：
+不同工况下
+source_datasets.mat    1200rpm转速下行星齿轮箱太阳轮裂纹、断齿、缺齿样本，每类样本399个，每个样本640个数据点
+target_datasets.mat   1380rpm转速下
+不同部位
+source_datasets_D.mat 1200rpm转速下行星齿轮箱太阳轮裂纹、断齿、缺齿样本
+target_datasets_D.mat 1200rpm转速下行星齿轮箱行星轮裂纹、断齿、缺齿样本
+
+结果展示：
+res_train_a-w.csv   不同工况下的每次迭代训练准确率及损失值
+res_test_a-w.csv     不同工况下的每次迭代测试准确率及损失值
+
+D_res_train_a-w.csv   不同部位下的每次迭代训练准确率及损失值
+D_res_test_a-w.csv     不同部位下的每次迭代测试准确率及损失值
+
+
+model_CNN1d.pkl  不同工况下的网络模型参数
+model_CNN1d_D.pkl  不同部位下的网络模型参数
+
+py文件：
+main.py   主程序
+mmd_pytorch.py 计算mmd距离
+data_loader.py  导入.mat格式文件数据集
+CNN1d.py 网络模型
+
+环境配置：MX350显卡+I7-10510U
+Python3.7.3
+
+cuda 10.1
+
+cuDNN 7.6.5
+
+pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio===0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
